@@ -16,27 +16,27 @@ class Worlds_coffee extends CI_Controller {
         date_default_timezone_set('UTC');
          $this->load->model('Coffee_model');
         $this->load->helper('url');
-        $this->load->library('session');
+        //$this->load->library('session');
         $this->load->library('pagination');
         
         // $this->load->view('header',$data);
         $string=$this->genrate_string(10);
         //echo $string;
-        if($this->session->userdata('session_id'))
-        {
-            $session_id=$this->session->userdata('session_id');
-            //echo $session_id;
-        }
-        else
-        {
-          $data['browser']=$_SERVER['HTTP_USER_AGENT'];
-          $data['session_token']=$string;
-          $data['ip_address']=$_SERVER['REMOTE_ADDR'];
-          if($this->db->insert('session_user',$data))
-          {
-            $user_id=$this->db->insert_id();
-            $this->session->set_userdata('session_id',$user_id);
-          }
+        // if($this->session->userdata('session_id'))
+        // {
+        //     $session_id=$this->session->userdata('session_id');
+        //     //echo $session_id;
+        // }
+        // else
+        // {
+        //   $data['browser']=$_SERVER['HTTP_USER_AGENT'];
+        //   $data['session_token']=$string;
+        //   $data['ip_address']=$_SERVER['REMOTE_ADDR'];
+        //   if($this->db->insert('session_user',$data))
+        //   {
+        //     $user_id=$this->db->insert_id();
+        //     $this->session->set_userdata('session_id',$user_id);
+        //   }
         }
         // $session_id = $this->session->userdata('session_id');
         // if($session_id!=13)
