@@ -7,7 +7,7 @@ class Coffee_model extends CI_Model
     {
         parent::__construct();
         date_default_timezone_set('UTC');
-        $this->load->database();
+        //$this->load->database();
     }
 //===================================================================================//
    public function fetch_all_products()
