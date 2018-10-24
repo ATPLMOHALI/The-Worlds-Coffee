@@ -37,7 +37,7 @@ class Worlds_coffee extends CI_Controller {
         //     $user_id=$this->db->insert_id();
         //     $this->session->set_userdata('session_id',$user_id);
         //   }
-        }
+        //}
         // $session_id = $this->session->userdata('session_id');
         // if($session_id!=13)
         // {
